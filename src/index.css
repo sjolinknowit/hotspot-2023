@@ -42,8 +42,8 @@ body {
 }
 
 h1, h2 {
-  font-size: var(--font-size-big);
-  line-height: var(--font-size-big);
+  font-size: 40px;
+  line-height: 40px;
   margin: 0;
 }
 

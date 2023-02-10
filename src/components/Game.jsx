@@ -9,9 +9,7 @@ const Game = ({ leaderboard, setLeaderboard }) => {
   const [showPopup, setShowPopup] = useState (false);
   const [finishedTime, setFinishedTime] = useState (0);
   const inputRef = useRef(null);
-
-  const word = "Kvistfritt kvastskaft";
-
+  const word = "You know you can learn it at Knowit"; //You know you can learn it at Knowit
 
   useEffect(() => {
     inputRef.current.focus()
@@ -43,10 +41,12 @@ const Game = ({ leaderboard, setLeaderboard }) => {
     if (time == 0) return
     // Update leaderboard
     setFinishedTime(time)
+    setShowPopup(false)
     setShowPopup(true)
   }
 
   const addToLeaderboard = (name, email, nick) => {
+    console.log("adding to leaderboard")
     // Add to leaderboard
     setShowPopup(false)
     setLeaderboard(prev => [...prev, { name, email, nick, time: finishedTime }])
@@ -55,13 +55,11 @@ const Game = ({ leaderboard, setLeaderboard }) => {
 
   return (
     <div className="game">
-
         <label htmlFor='wordInput' className='game__phrase' data-phrase={word}>
           { word }
         </label>
-        <textarea id="wordInput" ref={inputRef} className={ wordIsWrong ? 'game__input game__input--wrong' : 'game__input'} type="text" rows="1" onChange={event => handleOnInput(event)} />
-
-        
+        <textarea id="wordInput" ref={inputRef} className={ wordIsWrong ? 'game__input input--error' : 'game__input'} type="text" rows="1" onChange={event => handleOnInput(event)} />
+     
         <Popup {...{ time: finishedTime, leaderboard, addToLeaderboard, showPopup, setShowPopup }} />       
 
         <Stopwatch {...{ isActive: clockRunning, handleDone }} />

@@ -1,5 +1,4 @@
 
-// import context from '../LeaderboardContextRoot'
 
 import React from 'react'
 const Leaderboard = ({ leaderboard }) => {
@@ -14,7 +13,7 @@ const Leaderboard = ({ leaderboard }) => {
                 <table className='leaderboard__content'>
                     <thead>
                         <tr>
-                            <th>#</th>
+                            <th></th>
                             <th>Nickname</th>
                             <th>Tid</th>
                         </tr>

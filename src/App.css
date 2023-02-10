@@ -24,7 +24,7 @@
 .header {
   display: flex;
   align-items: end;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
 }
 
 .header__logo {
@@ -60,14 +60,14 @@
 
 
 .instructions {
-  margin-bottom: 8vh;
+  margin-bottom: 6vh;
 }
 
 .instructions__title {}
 
 .instructions__text {
   font-size: 20px;
-  max-width: 40ch;
+  max-width: 50ch;
   line-height: 1.75em;
 }
 
@@ -75,6 +75,8 @@
 .leaderboard {
   max-height: 64vh;
   overflow: overlay;
+  background: #B8DDBF75;
+  border-bottom-right-radius: 37px;
 }
 .leaderboard::-webkit-scrollbar {
   display: none;
@@ -90,14 +92,13 @@
 
 .leaderboard__content {
   width: 100%;
-  font-size: 22px;
+  font-size: 20px;
   text-align: left;
 }
 
 .leaderboard__content th {
-  font-size: 36px;
+  font-size: 28px;
 }
-
 
 .game {
   display: flex;
@@ -114,9 +115,14 @@
   font-family: Arial, Helvetica, sans-serif;
   user-select: none;
   font-size: var(--font-size-big);
+  line-height: var(--font-size-big);
+
+  /* background: #000; */
+  text-align: center;
+  /* padding: 1rem; */
 }
 
-.game__phrase::before {
+/* .game__phrase::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -124,7 +130,7 @@
   height: 2rem;
   margin: 0rem 0;
   z-index: -1;
-}
+} */
 
 .game__phrase::after {
   content: attr(data-phrase);
@@ -140,11 +146,13 @@
 
 .game__input {
   width: 100%;
-  margin: 0 auto 4rem;
+  height: 115px;
+  margin: 0 auto 1rem;
   padding: 0.25em 0.5em;
   border-radius: var(--input-border-radius);
   border: var(--border);
-  font-size: var(--font-size-big);
+  font-size: 36px;
+  line-height: 36px;
   outline: none;
   overflow-y: overlay;
 }
@@ -153,19 +161,17 @@
   display: none;
 }
 
-.game__input--wrong {
-
+.input--error:not(label), .input--error:is(label)::after {
   animation: inputErrorAnimation 1s forwards;
-
 }
 
 .game__time {
-  width: 435px;
+  width: 350px;
   padding: 0.25em 0 0;
   text-align: center;
   align-self: center;
-  font-size: 128px;
-  line-height: 128px;
+  font-size: 80px;
+  line-height: 80px;
   background-color: #fff;
   border: var(--border);
   border-radius: var(--input-border-radius);
@@ -225,7 +231,7 @@
 }
 
 .popup__form input {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.2rem;
   line-height: 32px;
   font-size: 32px;
   border: var(--border);
