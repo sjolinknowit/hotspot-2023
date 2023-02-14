@@ -1,4 +1,4 @@
-import {useState, useContext, createContext} from 'react';
+import {useState, useContext, createContext, useEffect} from 'react';
 import useLocalStorage from "use-local-storage";
 import Header from './components/Header';
 import Leaderboard from './components/Leaderboard';
@@ -11,6 +11,15 @@ import Cat from './assets/sovandekatt.gif';
 
 function App () {
   const [leaderboard, setLeaderboard] = useLocalStorage ("leaderboard", []);
+
+  useEffect(() => {
+    // If removed in browser local storage, set to empty array
+    if (leaderboard == null ||
+        leaderboard == undefined) {
+      setLeaderboard([]);
+    }
+
+  }, [leaderboard])
 
   return (
     <div className="app">
