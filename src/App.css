@@ -4,6 +4,14 @@
   --border: 10px solid #000;
 }
 
+body, * {
+  color: black;
+}
+
+input, textarea {
+  background-color: white;
+}
+
 .app {
   position: fixed;
   inset: 20px;
