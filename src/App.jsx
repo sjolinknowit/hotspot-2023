@@ -47,7 +47,7 @@ function App () {
       <div className="footer">
         <img className="footer__treeBench" src={TreeBench} alt="" />
         <img className="footer__cat" src={Cat} alt="" />
-        <p className="footer__copyright">© 2023 Knowit Experience</p>
+        <p className="footer__copyright">© 2024 Knowit Experience</p>
 
       </div>
     </div>

@@ -9,7 +9,7 @@ const Game = ({ leaderboard, setLeaderboard }) => {
   const [showPopup, setShowPopup] = useState (false);
   const [finishedTime, setFinishedTime] = useState (0);
   const inputRef = useRef(null);
-  const word = "You know you can learn it at Knowit"; //You know you can learn it at Knowit
+  const word = "Makers of a sustainable future"; //You know you can learn it at Knowit
 
   useEffect(() => {
     inputRef.current.focus()

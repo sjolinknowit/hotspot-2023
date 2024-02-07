@@ -24,7 +24,7 @@ const Leaderboard = ({ leaderboard }) => {
                                 // if (index >= 15) return null // Only show top 10
                                 return (
                                     <tr key={index} className='leaderboard-row'>
-                                        <td className='leaderboard-row__placement'>{ index + 1 }.</td>
+                                        <td className='leaderboard-row__placement'><span>{ index + 1 }</span></td>
                                         <td className='leaderboard-row__nick'>{ player.nick }</td>
                                         <td className='leaderboard-row__score'>{ (player.time / 1000).toFixed(2).replace(".", ":")} sek</td>
                                     </tr>
