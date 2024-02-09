@@ -144,12 +144,7 @@ input, textarea {
   height: 200%;
   opacity: 0;
   transform: rotate(30deg);
-
-  background: rgba(255, 255, 255, 0.25);
-  background: linear-gradient(to right,
-    rgba(255,255,255,.25) 0%,
-    rgba(255,255,255,0) 50%
-  );
+  background: rgba(255, 255, 255, 0.75);
 }
 
 .leaderboard tr:nth-of-type(1)  span {
@@ -444,18 +439,18 @@ button:focus-visible {
 }
 
 @keyframes shine{
-  50% {
-    opacity: 1;
+  25% {
+    opacity: .75;
     top: -30%;
     left: -30%;
     transition-property: left, top, opacity;
     transition-duration: 1.2s, 1.2s, 0.25s;
     transition-timing-function: ease;
   }
-  100% {
-    opacity: 0;
-    top: -30%;
-    left: -30%;
-    transition-property: left, top, opacity;
+  50% {
+      opacity: 0;
+      top: 100%;
+      left: 100%;
+      transition-property: left, top, opacity;
   }
 }
