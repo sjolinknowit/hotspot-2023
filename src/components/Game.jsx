@@ -1,13 +1,16 @@
 import React, { useState, useRef } from 'react';
 import { useEffect } from 'react';
+import useSound from 'use-sound';
 
 import Popup from './Popup';
+import winningSound from '../assets/winning.mp3';
 
 const Game = ({ leaderboard, setLeaderboard }) => {
   const [clockRunning, setClockRunning] = useState (false);
   const [wordIsWrong, setWordIsWrong] = useState (false);
   const [showPopup, setShowPopup] = useState (false);
   const [finishedTime, setFinishedTime] = useState (0);
+  const [playSound] = useSound(winningSound);
   const inputRef = useRef(null);
   const word = "Makers of a sustainable future"; //You know you can learn it at Knowit
 
@@ -31,6 +34,8 @@ const Game = ({ leaderboard, setLeaderboard }) => {
         // We won!
         setClockRunning(false)
         event.currentTarget.value = ""
+
+        playSound()
       }
     }
 
