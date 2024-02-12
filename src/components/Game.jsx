@@ -35,7 +35,7 @@ const Game = ({ leaderboard, setLeaderboard }) => {
         setClockRunning(false)
         event.currentTarget.value = ""
 
-        playSound()
+        // playSound()
       }
     }
 
