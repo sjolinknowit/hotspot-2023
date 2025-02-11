@@ -12,7 +12,7 @@ const Game = ({ leaderboard, setLeaderboard }) => {
   const [finishedTime, setFinishedTime] = useState (0);
   const [playSound] = useSound(winningSound);
   const inputRef = useRef(null);
-  const word = "Makers of a sustainable future"; //You know you can learn it at Knowit
+  const word = "Advisor in digital experience and security";
 
   useEffect(() => {
     inputRef.current.focus()
